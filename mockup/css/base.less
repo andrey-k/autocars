@@ -9,6 +9,8 @@
 @screen-lg-min: @screen-lg;
 @screen-lg-desktop: @screen-lg-min;
 
+@form-bg: #f9f9f9;
+
 @mobile-width: 500px;
 @navbar-bg-color: #000000;
 @navbar-color: #ffffff;
@@ -48,6 +50,9 @@
 @workers-border-top: #ffffff;
 @workers-border-bottom: #AFB4B8;
 
+@contact-bg: #ffffff;
+@contact-border-top: #e8e7e4;
+@contact-border-bottom: #c0c2c4;
 
 a:hover {
     text-decoration: none;
@@ -498,4 +503,45 @@ blockquote {
 #map-canvas {
     width: 100%;
     height: 400px;
+}
+
+// contact block
+#contact {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: @contact-bg;
+
+    border-top: 1px solid @contact-border-top;
+    border-bottom: 1px solid @contact-border-bottom;
+
+    .row {
+        text-align: left;
+    }
+}
+
+.contact-form {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.contact-address {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+form .form-control {
+    background: @form-bg;
+}
+
+.message {
+    margin-left: 15px;
+    margin-right: 15px;
 }

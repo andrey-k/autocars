@@ -43,6 +43,7 @@
                       <li><a href="#testimonials">Testimonials</a></li>
                       <li><a href="#workers">Workers</a></li>
                       <li><a href="#map">Find us</a></li>
+                      <li><a href="#contact">Contact</a></li>
                     </ul>
                   </div>
             </div>
@@ -261,7 +262,7 @@
             </div>
         </section>
 
-         <section id="workers" class="workers">
+        <section id="workers" class="workers">
             <div class="container">
                 <h2 class="section-title">
                     Who we are
@@ -313,6 +314,56 @@
 
         <section id="map" class="map">
             <div id="map-canvas"></div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">
+                    Contact info
+                </h2>
+                <div class="row border-top">
+                    <div class="col-sm-8 col-md-9 contact-form">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <form role="form" class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="subject">Subject</label>
+                                <select class="form-control" id="subject">
+                                      <option>Question</option>
+                                      <option>Feedback</option>
+                                      <option>Request</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="phone">Telephone number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone number" pattern="(\+?\d[- .]*){7,13}">
+                            </div>
+                            <div class="form-group message">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" rows="6"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-info pull-right">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 contact-address">
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p><strong>Main Office</strong></p>
+                        <p>Telephone: 123456789<br>
+                            Address: Kotkakuja 3E, Espoo, 02620<br>
+                            <a href="#">info@company.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <script src="libs/jquery.min.js"></script>
