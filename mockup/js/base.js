@@ -1,10 +1,14 @@
 'use strict';
 
-window.mapsCallback = function(){
-    $(window).trigger('mapsLoaded');
-};
-
 $(document).ready(function () {
+
+  window.mapsCallback = function(){
+    $(window).trigger('mapsLoaded');
+  };
+
+  $(window).on('hashchange', function () {
+    window.scrollTo(window.scrollX, window.scrollY - 50);
+  });
 
   $(window).on('load', function(){
     $(window).on('scroll', function(){

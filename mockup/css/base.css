@@ -508,3 +508,41 @@ form .form-control {
   margin-left: 15px;
   margin-right: 15px;
 }
+.footer {
+  background: #2c2d2d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #797e80;
+}
+.footer p {
+  margin-top: 10px;
+}
+.footer a {
+  color: #26A1D1;
+}
+.social a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  margin: 0 1px;
+  background: url(../img/social.png) 0 0 no-repeat;
+}
+.social .google {
+  background-position: 0 0;
+}
+.social .google:hover {
+  background-position: -34px 0;
+}
+.social .fb {
+  background-position: 0 -34px;
+}
+.social .fb:hover {
+  background-position: -34px -34px;
+}
+.social .twitter {
+  background-position: 0 -68px;
+}
+.social .twitter:hover {
+  background-position: -34px -68px;
+}
