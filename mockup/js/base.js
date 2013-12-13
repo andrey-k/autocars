@@ -1,9 +1,58 @@
 'use strict';
 
+window.mapsCallback = function(){
+    $(window).trigger('mapsLoaded');
+};
+
 $(document).ready(function () {
 
+  $(window).on('load', function(){
+    $(window).on('scroll', function(){
+      if ($(window).scrollTop() >= 1000) {
+        loadGoogleMaps();
+        $(window).off('scroll');
+      }
+    });
+  });
+
   runSlides();
-  loadMap();
+
+  function initialize(){
+    var myLatlng = new google.maps.LatLng(60.2296837,24.7602503),
+      myOptions = {
+        zoom: 13,
+        center: myLatlng,
+        disableDefaultUI: true,
+        panControl: true,
+        scrollwheel: false,
+        zoomControl: true,
+        zoomControlOptions: {
+          style: google.maps.ZoomControlStyle.DEFAULT
+        },
+
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+          style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+        },
+        streetViewControl: true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      },
+      map = new google.maps.Map(document.getElementById('map-canvas'), myOptions),
+      marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title:'Kotkakuja 3, Espoo, Finland'
+      });
+  }
+
+  function loadGoogleMaps(){
+    var script_tag = document.createElement('script');
+    script_tag.setAttribute('type','text/javascript');
+    script_tag.setAttribute('src','http://maps.google.com/maps/api/js?sensor=false&callback=mapsCallback');
+    (document.getElementsByTagName('head')[0] || document.documentElement).appendChild(script_tag);
+  }
+
+  $(window).bind('mapsLoaded', initialize);
 
   function runSlides() {
     var $slides = $('.slides li'),
@@ -51,34 +100,6 @@ $(document).ready(function () {
     $next_blockquote.addClass('visible-slide');
     event.preventDefault();
   });
-
-  function loadMap() {
-    var myLatlng = new google.maps.LatLng(60.2296837,24.7602503);
-        var myOptions = {
-          zoom: 13,
-          center: myLatlng,
-          disableDefaultUI: true,
-          panControl: true,
-          scrollwheel: false,
-          zoomControl: true,
-          zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.DEFAULT
-          },
-
-          mapTypeControl: true,
-          mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
-          },
-          streetViewControl: true,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-          },
-          map = new google.maps.Map(document.getElementById('map-canvas'), myOptions),
-          marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title:'Kotkakuja 3, Espoo, Finland'
-          });
-  }
 
   function ajaxCall(target_url, payload, onSuccess, onError) {
     $.ajax({
