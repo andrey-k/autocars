@@ -90,7 +90,17 @@ $(document).ready(function () {
 
   }
 
-  $('#testimonial-next').on( 'click', function(event) {
+  $('#offers').on('click', '.popup-deal', function(event) {
+    $('#offer-popup').modal();
+    event.preventDefault();
+  });
+
+  $('.modal').on('click', '#booking', function() {
+    $('#offer-popup').modal('hide');
+    location.href = '#contact';
+  });
+
+  $('#testimonial-next').on('click', function(event) {
     var $blockquote = $('blockquote.visible-slide'),
         $next_blockquote = $blockquote.next('.hidden-slide');
 
@@ -98,12 +108,28 @@ $(document).ready(function () {
       $next_blockquote = $('blockquote.hidden-slide').first();
     }
 
-    $blockquote.removeClass('visible-slide');
-    $blockquote.addClass('hidden-slide');
-    $next_blockquote.removeClass('hidden-slide');
-    $next_blockquote.addClass('visible-slide');
+    switchTestimonial($blockquote, $next_blockquote);
+
     event.preventDefault();
   });
+
+  $('#testimonial-prev').on('click', function(event) {
+    var $blockquote = $('blockquote.visible-slide'),
+        $next_blockquote = $blockquote.prev('.hidden-slide');
+
+    if (!$next_blockquote.length) {
+      $next_blockquote = $('blockquote.hidden-slide').last();
+    }
+
+    switchTestimonial($blockquote, $next_blockquote);
+
+    event.preventDefault();
+  });
+
+  function switchTestimonial($blockquote, $next_blockquote) {
+    $blockquote.toggleClass('visible-slide hidden-slide');
+    $next_blockquote.toggleClass('visible-slide hidden-slide');
+  }
 
   function ajaxCall(target_url, payload, onSuccess, onError) {
     $.ajax({

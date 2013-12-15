@@ -93,7 +93,7 @@
                             </a>
                         </div>
                         <div class="offer-description">
-                            <div class="offer-price">50</div>
+                            <div class="offer-price">50 &euro;</div>
                             <a href="#" class="popup-deal">
                                 <h4>Some offer text</h4>
                                 <p class="offer-text">Fully Electric Tesla S-Model Performance coming to our big show room. Factory order fully tailored by client, price according to options to boot. Expected delivery May/2013, Get your Tesla among the first!.</p>
@@ -109,7 +109,7 @@
                                 </a>
                             </div>
                             <div class="offer-description pull-right">
-                                <div class="offer-price">50</div>
+                                <div class="offer-price">50 &euro;</div>
                                 <a href="#" class="popup-deal">
                                     <h5>Some offer text</h5>
                                     <p class="offer-text">Fully Electric Tesla S-Model.</p>
@@ -123,7 +123,7 @@
                                 </a>
                             </div>
                             <div class="offer-description pull-right">
-                                <div class="offer-price">50</div>
+                                <div class="offer-price">50 &euro;</div>
                                 <a href="#" class="popup-deal">
                                     <h5>Some offer text</h5>
                                     <p class="offer-text">Fully Electric Tesla S-Model.</p>
@@ -137,7 +137,7 @@
                                 </a>
                             </div>
                             <div class="offer-description pull-right">
-                                <div class="offer-price">50</div>
+                                <div class="offer-price">50 &euro;</div>
                                 <a href="#" class="popup-deal">
                                     <h5>Some offer text</h5>
                                     <p class="offer-text">Fully Electric Tesla S-Model.</p>
@@ -336,9 +336,10 @@
                             <div class="col-md-6 form-group">
                                 <label for="subject">Subject</label>
                                 <select class="form-control" id="subject">
-                                      <option>Question</option>
-                                      <option>Feedback</option>
-                                      <option>Request</option>
+                                    <option>Appointment</option>
+                                    <option>Question</option>
+                                    <option>Feedback</option>
+                                    <option>Request</option>
                                 </select>
                             </div>
                             <div class="col-md-6 form-group">
@@ -356,15 +357,49 @@
                     </div>
                     <div class="col-sm-4 col-md-3 contact-address">
                         <p>Lorem ipsum dolor sit amet</p>
-                        <p><strong>Main Office</strong></p>
-                        <p>Telephone: 123456789<br>
-                            Address: Kotkakuja 3E, Espoo, 02620<br>
-                            <a href="#">info@company.com</a>
-                        </p>
+                        <address>
+                              <strong>Main Office</strong><br>
+                              Address:Kotkakuja 3E, Espoo, 02620<br>
+                              <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+                        <address>
+                              <strong>E-mail</strong><br>
+                              <a href="mailto:#">first.last@example.com</a>
+                        </address>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="modal fade" id="offer-popup" tabindex="-1" role="dialog" aria-labelledby="offer-popup-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="offer-popup-label">Modal title</h4>
+                    </header>
+                    <div class="modal-body">
+                        <img class="pop-up" src="img/special_offer_1.jpg" alt="week offer img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Integer molestie lorem at massa</li>
+                            <li>Facilisis in pretium nisl aliquet</li>
+                            <li>Nulla volutpat aliquam velit</li>
+                            <li>Faucibus porta lacus fringilla vel</li>
+                            <li>Aenean sit amet erat nunc</li>
+                            <li>Eget porttitor lorem</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <footer>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="booking" type="button" class="btn btn-info">Book an appointment</button>
+                    </footer>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
 
         <footer class="footer">
             <div class="container">

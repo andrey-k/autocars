@@ -13,14 +13,14 @@
 
 @mobile-width: 500px;
 @navbar-bg-color: #000000;
-@navbar-color: #ffffff;
+@navbar-color: #FFFFFF;
 @navbar-hover-color: #e7e7e7;
 
 @border-header-color: #C7C2C2;
 
 @navigation-color: #DBDADA;
 
-@slider-color: #ffffff;
+@slider-color: #FFFFFF;
 @shadow-color: #000000;
 @header-color: #29AAE6;
 @price-color: #F1531A;
@@ -29,17 +29,17 @@
 @offers-bg: #e7e7e7;
 @offers-border-top: #9D9FA0;
 @offers-border-bottom: #c0c2c4;
-@offer-bg: #ffffff;
+@offer-bg: #FFFFFF;
 @offer-border-bottom: #B8C2C9;
 @offer-border-right: #EE612F;
 
 
 @services-bg: #D5DBDF;
-@services-border-top: #ffffff;
+@services-border-top: #FFFFFF;
 @services-border-bottom: #AFB4B8;
 
-@testimonials-bg: #ffffff;
-@testimonials-border-top: #ffffff;
+@testimonials-bg: #FFFFFF;
+@testimonials-border-top: #FFFFFF;
 @testimonials-border-bottom: #AFB4B8;
 @testimonials-quote-author-color: #d31c1e;
 
@@ -47,11 +47,11 @@
 
 
 @workers-bg: #F8F8F8;
-@workers-border-top: #ffffff;
+@workers-border-top: #FFFFFF;
 @workers-border-bottom: #AFB4B8;
 
-@contact-bg: #ffffff;
-@contact-border-top: #e8e7e4;
+@contact-bg: #FFFFFF;
+@contact-border-top: #B9B8B3;
 @contact-border-bottom: #c0c2c4;
 
 @footer-bg: #2c2d2d;
@@ -279,6 +279,7 @@ a:hover {
     top: 15px;
     right: 15px;
     color: @price-color;
+    font-size: 20px;
 }
 
 .offer-text {
@@ -403,7 +404,7 @@ a:hover {
     }
 }
 
-// testimonials
+// testimonials block
 .testimonials {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -446,10 +447,12 @@ blockquote {
 
 .prev {
     left: 10px;
+    z-index: 2;
 }
 
 .next {
     right: 10px;
+    z-index: 2;
 }
 
 // workers
@@ -596,4 +599,17 @@ form .form-control {
             background-position: -34px -68px;
         }
     }
+}
+
+// pop-up
+
+img.pop-up {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.modal footer {
+    text-align: right;
+    padding: 0 20px 20px;
 }
