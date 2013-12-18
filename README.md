@@ -5,6 +5,9 @@ Simple mockup for car service repair using
 - lesshat
 - Bootstrap 3.0.3
 
-will use
-- django
+Requirements
 - Database: PostgreSQL
+- Django
+- South
+- django-tinymce
+- psycopg2
