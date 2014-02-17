@@ -22,10 +22,10 @@ $(document).ready(function () {
   runSlides();
 
   function initialize(){
-    var myLatlng = new google.maps.LatLng(60.2296837,24.7602503),
+    var myLatLng = new google.maps.LatLng(60.2296837,24.7602503),
       myOptions = {
         zoom: 13,
-        center: myLatlng,
+        center: myLatLng,
         disableDefaultUI: true,
         panControl: true,
         scrollwheel: false,
@@ -43,21 +43,27 @@ $(document).ready(function () {
       },
       map = new google.maps.Map(document.getElementById('map-canvas'), myOptions),
       marker = new google.maps.Marker({
-        position: myLatlng,
+        position: myLatLng,
         map: map,
         title:'Kotkakuja 3, Espoo, Finland'
       });
   }
 
   function loadGoogleMaps(){
-    var script_tag = document.createElement('script');
-    script_tag.setAttribute('type','text/javascript');
-    script_tag.setAttribute('src','http://maps.google.com/maps/api/js?sensor=false&callback=mapsCallback');
-    (document.getElementsByTagName('head')[0] || document.documentElement).appendChild(script_tag);
+    var scriptTag = document.createElement('script');
+    scriptTag.setAttribute('type','text/javascript');
+    scriptTag.setAttribute('src','http://maps.google.com/maps/api/js?sensor=false&callback=mapsCallback');
+    (document.getElementsByTagName('head')[0] || document.documentElement).appendChild(scriptTag);
   }
 
   $(window).bind('mapsLoaded', initialize);
 
+  /**
+  * runSlides() find li elements from 'slides' class.
+  * Iterate though those elements with changing classes
+  * to make visible or invisible blocks.
+  *
+  */
   function runSlides() {
     var $slides = $('.slides li'),
         count = $slides.length,
@@ -90,6 +96,11 @@ $(document).ready(function () {
 
   }
 
+  /**
+  * Show popup window with additional information
+  * regarding to the clicked element.
+  *
+  */
   $('#offers').on('click', '.popup-deal', function(event) {
     $('#offer-popup').modal();
     event.preventDefault();
@@ -100,47 +111,55 @@ $(document).ready(function () {
     location.href = '#contact';
   });
 
+  /**
+  * switchTestimonial() Take two elements as parameters 
+  * and switch visible/hidden classes of those elements.
+  *
+  * @param <Element> element, <Element> element
+  *
+  */
+  function switchTestimonial($blockquote, $nextBlockquote) {
+    $blockquote.toggleClass('visible-slide hidden-slide');
+    $nextBlockquote.toggleClass('visible-slide hidden-slide');
+  }
+
   $('#testimonial-next').on('click', function(event) {
     var $blockquote = $('blockquote.visible-slide'),
-        $next_blockquote = $blockquote.next('.hidden-slide');
+        $nextBlockquote = $blockquote.next('.hidden-slide');
 
-    if (!$next_blockquote.length) {
-      $next_blockquote = $('blockquote.hidden-slide').first();
+    if (!$nextBlockquote.length) {
+      $nextBlockquote = $('blockquote.hidden-slide').first();
     }
 
-    switchTestimonial($blockquote, $next_blockquote);
+    switchTestimonial($blockquote, $nextBlockquote);
 
     event.preventDefault();
   });
 
   $('#testimonial-prev').on('click', function(event) {
     var $blockquote = $('blockquote.visible-slide'),
-        $next_blockquote = $blockquote.prev('.hidden-slide');
+        $nextBlockquote = $blockquote.prev('.hidden-slide');
 
-    if (!$next_blockquote.length) {
-      $next_blockquote = $('blockquote.hidden-slide').last();
+    if (!$nextBlockquote.length) {
+      $nextBlockquote = $('blockquote.hidden-slide').last();
     }
 
-    switchTestimonial($blockquote, $next_blockquote);
+    switchTestimonial($blockquote, $nextBlockquote);
 
     event.preventDefault();
   });
 
-  function switchTestimonial($blockquote, $next_blockquote) {
-    $blockquote.toggleClass('visible-slide hidden-slide');
-    $next_blockquote.toggleClass('visible-slide hidden-slide');
-  }
-
-  function ajaxCall(target_url, payload, onSuccess, onError) {
+  // TODO FIXME: test ajaxCall with form data.
+  function ajaxCall(targetUrl, payload, onSuccess, onError) {
     $.ajax({
-      url: target_url,
+      url: targetUrl,
       data: payload,
       type: 'POST',
       success: function(result) {
         onSuccess(result);
       },
       error: function(result) {
-        if (typeof(onError) == 'undefined') {
+        if (typeof(onError) === 'undefined') {
           console.log('onError');
         } else {
           onError(result);
