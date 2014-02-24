@@ -7,5 +7,5 @@ urlpatterns = patterns(
     '',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^$', include('autocars.sections.urls', namespace='sections')),
+    url(r'^$', include('sections.urls', namespace='sections')),
 )

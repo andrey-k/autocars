@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from autocars.sections import views
+from sections import views
 
 urlpatterns = patterns(
     '',
