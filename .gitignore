@@ -1,3 +1,4 @@
 
 *.pyc
 django/media/
+django/sections/static/sections/css/*.css
