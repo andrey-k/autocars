@@ -1,7 +1,39 @@
 {% extends "header_footer.html" %}
+{% load staticfiles %}
 
 {% block title %}AutoCars{% endblock %}
 
 {% block main_body %}
-
+  <section id="home" class="slider">
+    <ul class="slides">
+      <li class="visible-slide">
+        <img alt="slide image" data-src-base="{% static 'sections/img/' %}" data-src="<768:slider_1_1_768.jpg, <960:slider_1_1_960.jpg, >960:slider_1_1.jpg" >
+        <div class="slide-text">
+          <h1 class="animate">Incredible service</h1>
+          <p class="animate">First class service at affordable prices</p>
+        </div>
+      </li>
+      <li class="hidden-slide">
+        <img alt="slide image" data-src-base="{% static 'sections/img/' %}" data-src="<768:slider_1_2_768.jpg, <960:slider_1_2_960.jpg, >960:slider_1_2.jpg">
+        <div class="slide-text">
+          <h1 class="animate">Repairs</h1>
+          <p class="animate">Need something fixing? Let us help!</p>
+        </div>
+      </li>
+      <li class="hidden-slide">
+        <img alt="slide image" data-src-base="{% static 'sections/img/' %}" data-src="<768:slider_1_3_768.jpg, <960:slider_1_3_960.jpg, >960:slider_1_3.jpg">
+        <div class="slide-text">
+          <h1 class="animate">Best mechanics</h1>
+          <p class="animate">We have experienced people who in love with cars</p>
+        </div>
+      </li>
+      <li class="hidden-slide">
+        <img alt="slide image" data-src-base="{% static 'sections/img/' %}" data-src="<768:slider_1_4_768.jpg, <960:slider_1_4_960.jpg, >960:slider_1_4.jpg">
+        <div class="slide-text">
+          <h1>Wide range</h1>
+          <p>We service almost all makes and models</p>
+        </div>
+      </li>
+    </ul>
+  </section>
 {% endblock %}
