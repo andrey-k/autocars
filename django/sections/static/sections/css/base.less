@@ -3,15 +3,15 @@
 
 // bootstrap variables to make 8 columns grid system for large screens
 @grid-columns: 8;
-@grid-gutter-width: 30px;
-@grid-float-breakpoint: 768px;
-@screen-lg: 1200px;
+@grid-gutter-width: 3rem;
+@grid-float-breakpoint: 76.8rem;
+@screen-lg: 120rem;
 @screen-lg-min: @screen-lg;
 @screen-lg-desktop: @screen-lg-min;
 
 @form-bg: #f9f9f9;
 
-@mobile-width: 500px;
+@mobile-width: 50rem;
 @navbar-bg-color: #000000;
 @navbar-color: #FFFFFF;
 @navbar-hover-color: #e7e7e7;
@@ -71,7 +71,7 @@ a:hover {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 117rem;
 }
 
 .row {
@@ -103,24 +103,24 @@ a:hover {
 }
 
 .section-title {
-    border-left: 3px double @icon-border;
-    padding-left: 5px;
-    margin: 0 auto 15px auto;
-    line-height: 20px;
+    border-left: .3rem double @icon-border;
+    padding-left: .5rem;
+    margin: 0 auto 1.5rem auto;
+    line-height: 2rem;
     width: @mobile-width;
 
-    @media (min-width: 768px) {
+    @media (min-width: 76.8rem) {
         width: auto;
     }
 }
 
 .border-top {
-    border-top: 1px solid @border-header-color;
-    padding-top: 15px;
+    border-top: .1rem solid @border-header-color;
+    padding-top: 1.5rem;
     margin: auto;
     width: @mobile-width;
 
-    @media (min-width: 768px) {
+    @media (min-width: 76.8rem) {
         width: auto;
     }
 }
@@ -168,26 +168,26 @@ a:hover {
 .slide-text {
     position: absolute;
     top: 30%;
-    left: 50px;
+    left: 50rem;
     .transition-property(left, opacity);
 
-    @media (min-width: 768px) {
-        left: 200px;
+    @media (min-width: 76.8rem) {
+        left: 20rem;
     }
 
     h1 {
-        width: 400px;
+        width: 50rem;
         position: relative;
         color: @slider-color;
-        text-shadow: 2px 2px 1px @shadow-color;
+        text-shadow: .2rem .2rem .1rem @shadow-color;
         text-transform: uppercase;
     }
 
     p {
-        width: 400px;
+        width: 50rem;
         position: relative;
         color: @slider-color;
-        text-shadow: 1px 1px 1px @shadow-color;
+        text-shadow: .1rem .1rem .1rem @shadow-color;
         font-size: 2rem;
     }
 }
@@ -231,12 +231,12 @@ a:hover {
 
 // offers block
 #offers {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: @offers-bg;
 
-    border-top: 3px solid @offers-border-top;
-    border-bottom: 1px solid @offers-border-bottom;
+    border-top: .3rem solid @offers-border-top;
+    border-bottom: .1rem solid @offers-border-bottom;
 
     h3 {
         text-transform: uppercase;
@@ -262,32 +262,32 @@ a:hover {
     width: @mobile-width;
     margin: auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: 76.8rem) {
         width: 50%;
     }
 
     img {
-        width: 470px;
+        width: 47rem;
         display: block;
         margin: auto;
-        @media (min-width: 768px) {
+        @media (min-width: 76.8rem) {
             width: 100%;
         }
     }
 }
 
 .offer-description {
-    padding: 15px 15px 0 15px;
+    padding: 1.5rem 1.5rem 0 1.5rem;
     background-color: @offer-bg;
     position: relative;
 }
 
 .offer-price {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 1.5rem;
+    right: 1.5rem;
     color: @price-color;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .offer-text {
@@ -299,32 +299,32 @@ a:hover {
     width: @mobile-width;
     margin: auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: 76.8rem) {
         width: 50%;
     }
 }
 
 .special-deal {
-    height: 120px;
+    height: 12rem;
     width: 100%;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
     margin-left: 0;
-    border-bottom: 2px solid @offer-border-bottom;
+    border-bottom: .2rem solid @offer-border-bottom;
 
-    @media (min-width: 992px) {
-        height: 140px;
+    @media (min-width: 99.2rem) {
+        height: 14rem;
     }
 
-    @media (min-width: 1200px) {
-        height: 152px;
+    @media (min-width: 120rem) {
+        height: 15.2rem;
     }
 
     .offer-img {
         width: 70%;
         height: 100%;
         overflow: hidden;
-        border-right: 2px solid @offer-border-right;
+        border-right: .2rem solid @offer-border-right;
 
         img {
             width: 100%;
@@ -339,37 +339,37 @@ a:hover {
     }
 
     .offer-price {
-        top: 120px;
-        right: 10px;
+        top: 12rem;
+        right: 1rem;
     }
 }
 
 // service block
 #services {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: @services-bg;
 
-    border-top: 1px solid @services-border-top;
-    border-bottom: 1px solid @services-border-bottom;
+    border-top: .1rem solid @services-border-top;
+    border-bottom: .1rem solid @services-border-bottom;
 
     .service-description {
-        margin-left: 80px;
+        margin-left: 8rem;
     }
 
     .glyphicon {
-        font-size: 40px;
+        font-size: 4rem;
     }
 }
 
 .brands {
     .make-row();
 
-    padding-top: 15px;
+    padding-top: 1.5rem;
     margin: auto;
     width: @mobile-width;
 
-    @media (min-width: 768px) {
+    @media (min-width: 76.8rem) {
         width: auto;
     }
 }
@@ -379,11 +379,11 @@ a:hover {
 
 .service {
     text-align: left;
-    margin-bottom:30px;
+    margin-bottom:3rem;
     
-    @media (max-width: 768px) {
+    @media (max-width: 76.8rem) {
         width: @mobile-width;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 3rem auto;
     }
 
     h4 {
@@ -393,18 +393,18 @@ a:hover {
     }
 
     .icon {
-        width: 70px;
-        height: 70px;
+        width: 7rem;
+        height: 7rem;
         text-align: center;
-        font-size: 45px;
+        font-size: 4.5rem;
         .border-radius(50%);
-        border: 5px solid @icon-border;
+        border: .5rem solid @icon-border;
         .transition(all .5 ease-in-out);
     }
 
     &:hover .icon {
         border-color: @services-bg;
-        .box-shadow(0 0 0 5px @icon-border);
+        .box-shadow(0 0 0 .5rem @icon-border);
     }
 
     .glyphicon {
@@ -414,16 +414,16 @@ a:hover {
 
 // testimonials block
 .testimonials {
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     background-color: @testimonials-bg;
 
-    border-top: 1px solid @testimonials-border-top;
-    border-bottom: 1px solid @testimonials-border-bottom;
+    border-top: .1rem solid @testimonials-border-top;
+    border-bottom: .1rem solid @testimonials-border-bottom;
 
     .blockquotes {
-        padding-top: 70px;
-        background: url(../img/quotes.png) center 10px no-repeat;
+        padding-top: 7rem;
+        background: url(../img/quotes.png) center 1rem no-repeat;
         position: relative;
     }
 
@@ -431,7 +431,7 @@ a:hover {
         position: absolute;
         top: 50%;
         color: @navigation-color;
-        font-size: 40px;
+        font-size: 4rem;
 
         &:hover {
             color: darken(@navigation-color, 20%);
@@ -444,8 +444,8 @@ blockquote {
     margin: auto;
     position: relative;
     
-    @media (min-width: 768px) {
-        width: 650px;
+    @media (min-width: 76.8rem) {
+        width: 65rem;
     }
 
     small {
@@ -454,35 +454,35 @@ blockquote {
 }
 
 .prev {
-    left: 10px;
+    left: 1rem;
     z-index: 2;
 }
 
 .next {
-    right: 10px;
+    right: 1rem;
     z-index: 2;
 }
 
 // workers
 
 .workers {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: @workers-bg;
 
-    border-top: 1px solid @workers-border-top;
-    border-bottom: 1px solid @workers-border-bottom;
+    border-top: .1rem solid @workers-border-top;
+    border-bottom: .1rem solid @workers-border-bottom;
 }
 
 .worker {
     text-align: left;
 
     .img {
-        width: 70px;
-        height: 70px;
+        width: 7rem;
+        height: 7rem;
         text-align: center;
         .border-radius(50%);
-        border: 5px solid @icon-border;
+        border: .5rem solid @icon-border;
         overflow: hidden;
     }
 
@@ -499,35 +499,35 @@ blockquote {
 }
 
 .arrow {
-    border: 6px solid #cd1d1f;
+    border: .6rem solid #cd1d1f;
     border-bottom-color: transparent;
     border-right-color: transparent;
     border-top-color: transparent;
-    height: 12px;
-    left: 84px;
+    height: 1.2rem;
+    left: 8.4rem;
     position: absolute;
-    top: 30px;
+    top: 3rem;
 }
 
 .worker-description {
-    margin-left: 80px;
-    margin-bottom: 30px;
+    margin-left: 8rem;
+    margin-bottom: 3rem;
 }
 
 // map
 #map-canvas {
     width: 100%;
-    height: 400px;
+    height: 40rem;
 }
 
 // contact block
 #contact {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background-color: @contact-bg;
 
-    border-top: 1px solid @contact-border-top;
-    border-bottom: 1px solid @contact-border-bottom;
+    border-top: .1rem solid @contact-border-top;
+    border-bottom: .1rem solid @contact-border-bottom;
 
     .row {
         text-align: left;
@@ -535,19 +535,19 @@ blockquote {
 }
 
 .contact-form {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 76.8rem) {
         margin: 0;
     }
 }
 
 .contact-address {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 76.8rem) {
         margin: 0;
     }
 }
@@ -557,19 +557,19 @@ form .form-control {
 }
 
 .message {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 // footer
 .footer {
     background: @footer-bg;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color: @footer-text-color;
 
     p {
-        margin-top: 10px;
+        margin-top: 1rem;
     }
 
     a {
@@ -580,31 +580,31 @@ form .form-control {
 .social {
     a {
         display: inline-block;
-        width: 34px;
-        height: 34px;
+        width: 3.4rem;
+        height: 3.4rem;
         overflow: hidden;
-        margin: 0 1px;
+        margin: 0 .1rem;
         background: url(../img/social.png) 0 0 no-repeat;
     }
 
     .google {
         background-position: 0 0;
         &:hover {
-            background-position: -34px 0;
+            background-position: -3.4rem 0;
         }
     }
 
     .fb {
-        background-position: 0 -34px;
+        background-position: 0 -3.4rem;
         &:hover {
-            background-position: -34px -34px;
+            background-position: -3.4rem -3.4rem;
         }
     }
 
     .twitter {
-        background-position: 0 -68px;
+        background-position: 0 -6.8rem;
         &:hover {
-            background-position: -34px -68px;
+            background-position: -3.4rem -6.8rem;
         }
     }
 }
@@ -613,11 +613,11 @@ form .form-control {
 
 img.pop-up {
     float: left;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
 
 .modal footer {
     text-align: right;
-    padding: 0 20px 20px;
+    padding: 0 2rem 2rem;
 }
