@@ -4,8 +4,8 @@
 // bootstrap variables to make 8 columns grid system for large screens
 @grid-columns: 8;
 @grid-gutter-width: 3rem;
-@grid-float-breakpoint: 76.8rem;
-@screen-lg: 120rem;
+@grid-float-breakpoint: 768px;
+@screen-lg: 1200px;
 @screen-lg-min: @screen-lg;
 @screen-lg-desktop: @screen-lg-min;
 
@@ -334,6 +334,10 @@ a:hover {
         overflow: hidden;
         border-right: .2rem solid @offer-border-right;
 
+        @media (min-width: 768px) and (max-width:992px) {
+            width: 60%;
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -344,6 +348,10 @@ a:hover {
         width: 30%;
         height: 100%;
         padding: 0;
+
+        @media (min-width: 768px) and (max-width:992px) {
+            width: 40%;
+        }
     }
 
     .offer-price {
@@ -392,6 +400,10 @@ a:hover {
     @media (max-width: 768px) {
         width: @mobile-width;
         margin: 0 auto 3rem auto;
+    }
+
+    @media (min-width: 768px) {
+        min-height: 150px;
     }
 
     h4 {

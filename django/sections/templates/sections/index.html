@@ -119,4 +119,52 @@
     </div>
   </section>
 
+  <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">
+          What we can offer
+        </h2>
+        <div class="row border-top">
+          {% for service in services %}
+          <div class="service col-xs-12 col-sm-6 col-md-4">
+            <div class="icon pull-left">
+              <span class="glyphicon {{ service.icon }}"></span>
+            </div>
+            <div class="service-description">
+              <h4>{{ service.name }}</h4>
+              <p>{{ service.description }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="row brands">
+          <div class="col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/mercedes-benz.png' %}" alt="mercedes-benz logo">
+          </div>
+          <div class="col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/audi.png' %}" alt="audi logo">
+          </div>
+          <div class="col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/bmw.png' %}" alt="bmw logo">
+          </div>
+          <div class="col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/volvo.png' %}" alt="volvo logo">
+          </div>
+          <div class="col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/ferrari.png' %}" alt="ferrari logo">
+          </div>
+          <div class="col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/peugeot.png' %}" alt="peugeot logo">
+          </div>
+          <div class="col-sm-offset-4 col-lg-offset-0 col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/reno.png' %}" alt="reno logo">
+          </div>
+          <div class="col-xs-3 col-sm-2 brand-content">
+            <img src="{% static 'sections/img/honda.png' %}" alt="honda logo">
+          </div>
+        </div>
+      </div>
+    </section>
+
 {% endblock %}
