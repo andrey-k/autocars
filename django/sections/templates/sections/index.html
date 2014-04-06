@@ -36,4 +36,87 @@
       </li>
     </ul>
   </section>
+
+  <section id="offers" class="offers">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 week-offer">
+          <h3>Offer of the week</h3>
+          <div class="offer-img">
+            <a class="popup-deal" data-toggle="modal" href="#week-offer-popup">
+              <img src="{{ week_offer.image.url }}" alt="week offer img">
+            </a>
+          </div>
+          <div class="offer-description">
+            <div class="offer-price">{{ week_offer.price }} &euro;</div>
+            <a class="popup-deal" data-toggle="modal" href="#week-offer-popup">
+              <h4>{{ week_offer.title }}</h4>
+              {% autoescape off %}
+              <div class="offer-text">{{ week_offer.short_description }}</div>
+              {% endautoescape %}
+            </a>
+          </div>
+          <div class="modal fade" id="week-offer-popup" tabindex="-1" role="dialog" aria-labelledby="offer-popup-label" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <header class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="offer-popup-label">{{ week_offer.title }}</h4>
+                </header>
+                <div class="modal-body">
+                  <img class="pop-up" src="{{ week_offer.image.url }}" alt="week offer img">
+                  {{ week_offer.description|safe }}
+                </div>
+                <footer>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button id="booking" type="button" class="btn btn-info">Book an appointment</button>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 special-deals">
+          <h3>Special deals</h3>
+          {% for offer in special_offers %}
+          <div class="row special-deal">
+            <div class="offer-img pull-left">
+              <a class="popup-deal" data-toggle="modal" href="#offer-{{ forloop.counter }}-popup">
+                <img src="{{ offer.image.url }}" alt="week offer img">
+              </a>
+            </div>
+            <div class="offer-description pull-right">
+              <div class="offer-price">{{ offer.price }} &euro;</div>
+              <a class="popup-deal" data-toggle="modal" href="#offer-{{ forloop.counter }}-popup">
+                <h5>{{ offer.title }}</h5>
+                {% autoescape off %}
+                <div class="offer-text">{{ offer.short_description }}</div>
+                {% endautoescape %}
+              </a>
+            </div>
+          </div>
+          <div class="modal fade" id="offer-{{ forloop.counter }}-popup" tabindex="-1" role="dialog" aria-labelledby="offer-popup-label" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <header class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="offer-popup-label">{{ offer.title }}</h4>
+                </header>
+                <div class="modal-body">
+                  <img class="pop-up" src="{{ offer.image.url }}" alt="week offer img">
+                  {{ offer.description|safe }}
+                </div>
+                <footer>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button id="booking" type="button" class="btn btn-info">Book an appointment</button>
+                </footer>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}

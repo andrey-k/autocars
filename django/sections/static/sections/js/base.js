@@ -96,16 +96,6 @@ $(document).ready(function () {
 
   }
 
-  /**
-  * Show popup window with additional information
-  * regarding to the clicked element.
-  *
-  */
-  $('#offers').on('click', '.popup-deal', function(event) {
-    $('#offer-popup').modal();
-    event.preventDefault();
-  });
-
   $('.modal').on('click', '#booking', function() {
     $('#offer-popup').modal('hide');
     location.href = '#contact';
@@ -166,6 +156,6 @@ $(document).ready(function () {
         }
       }
     });
-}
+  }
 
 });

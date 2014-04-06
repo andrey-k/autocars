@@ -76,6 +76,10 @@ a:hover {
 
 .row {
     text-align: center;
+
+    .modal-dialog {
+        text-align: left;
+    }
 }
 
 .navbar {
@@ -129,7 +133,7 @@ a:hover {
     position: relative;
     opacity: 1;
     z-index: 2;
-    .transition(opacity .5 ease-in-out);
+    .transition(opacity 0.5s ease-in-out);
 
     h1.animate{
       left: 0;
@@ -168,7 +172,7 @@ a:hover {
 .slide-text {
     position: absolute;
     top: 30%;
-    left: 50rem;
+    left: 5rem;
     .transition-property(left, opacity);
 
     @media (min-width: 768px) {
@@ -261,9 +265,11 @@ a:hover {
     text-align: left;
     width: @mobile-width;
     margin: auto;
+    float: none;
 
     @media (min-width: 768px) {
         width: 50%;
+        float: left;
     }
 
     img {
@@ -298,9 +304,11 @@ a:hover {
     text-align: left;
     width: @mobile-width;
     margin: auto;
+    float: none;
 
     @media (min-width: 768px) {
         width: 50%;
+        float: left;
     }
 }
 
@@ -339,7 +347,7 @@ a:hover {
     }
 
     .offer-price {
-        top: 12rem;
+        top: 80%;
         right: 1rem;
     }
 }
@@ -615,6 +623,7 @@ img.pop-up {
     float: left;
     margin-right: 2rem;
     margin-bottom: 1rem;
+    max-width: 300px;
 }
 
 .modal footer {

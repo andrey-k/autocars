@@ -6,7 +6,7 @@ class SpecialOffer(models.Model):
     title = models.CharField(max_length=200)
     short_description = HTMLField()
     description = HTMLField()
-    price = models.DecimalField(max_digits=5, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=0)
     is_active = models.BooleanField(default=True)
     is_week_offer = models.BooleanField(default=False)
     image = models.ImageField(null=False, upload_to='offers')
