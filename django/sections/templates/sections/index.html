@@ -184,4 +184,26 @@
       </div>
     </section>
 
+    <section id="workers" class="workers">
+      <div class="container">
+        <h2 class="section-title">
+          Who we are
+        </h2>
+        <div class="row border-top">
+          {% for worker in workers %}
+          <div class="worker col-xs-12 col-sm-6">
+            <span class="arrow">&nbsp;</span>
+            <div class="img pull-left">
+              <img src="{{ worker.photo.url }}" alt="photo {{ worker.name }}">
+            </div>
+            <div class="worker-description">
+              <h4>{{ worker.name }}</h4>
+              <p>{{ worker.job_description }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
 {% endblock %}

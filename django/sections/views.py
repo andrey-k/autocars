@@ -4,6 +4,7 @@ from django.shortcuts import get_list_or_404
 from sections.models import SpecialOffer
 from sections.models import Service
 from sections.models import Testimonial
+from sections.models import Worker
 
 
 def index(request):
@@ -16,6 +17,9 @@ def index(request):
 
     testimonials = Testimonial.objects.all()
 
+    workers = Worker.objects.all()
+
     return render(request, 'sections/index.html',
                   {'week_offer': week_offer, 'special_offers': special_offers,
-                   'services': services, 'testimonials': testimonials})
+                   'services': services, 'testimonials': testimonials,
+                   'workers': workers})

@@ -3,3 +3,4 @@
 django/media/
 django/sections/static/sections/css/*.css
 django/static/
+.directory
