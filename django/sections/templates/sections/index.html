@@ -167,4 +167,21 @@
       </div>
     </section>
 
+    <section id="testimonials" class="testimonials">
+      <div class="container blockquotes">
+        {% for testimonial in testimonials %}
+        <blockquote class={% if forloop.counter == 1%}"visible-slide"{% else %}"hidden-slide"{% endif %}>
+          <p>{{ testimonial.text }}</p>
+          <small>{{ testimonial.author }}</small>
+        </blockquote>
+        {% endfor %}
+        <a class="prev navigation" id="testimonial-prev" href="#">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="next navigation" id="testimonial-next" href="#">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </section>
+
 {% endblock %}
