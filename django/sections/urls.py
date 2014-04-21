@@ -4,5 +4,6 @@ from sections import views
 
 urlpatterns = patterns(
     '',
-    url(r'^$', views.index, name='index')
+    url(r'^contact/', views.contact, name='contact_url'),
+    url(r'^$', views.index, name='index'),
 )
