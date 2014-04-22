@@ -62,7 +62,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'autocars',
-        'USER': 'jarvis_super',
+        'USER': 'andrey_user',
         'PASSWORD': '2CeViLeCVvf0',
     }
 }
@@ -93,3 +93,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+#set YOUR account settings
+#EMAIL_HOST_USER = 'my gmail account'
+#EMAIL_HOST_PASSWORD = 'my gmail account password'

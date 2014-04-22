@@ -139,7 +139,48 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-  // TODO FIXME: test ajaxCall with form data.
+  $('#contact-form').submit(function(event){
+    var waitData = {
+      status: 'WAIT',
+      messageClass: 'alert-info',
+      message: 'Please wait while we validate and send message.'
+    };
+
+    ajaxCall('/contact/', $(this).serialize(), function(data) {showMessage(data);}, showMessage);
+    showMessage(waitData);
+    event.preventDefault();
+  });
+
+  $('#info .close').on('click', function() {
+    $('#info').addClass('hidden');
+  });
+
+  function showMessage(data) {
+    var messageHolder = $('#info'),
+        messageClass,
+        message;
+
+    if (data) {
+      if (data.status === 'OK' || data.status === 'WAIT') {
+        messageClass = data.messageClass;
+        message = data.message;
+      }
+    } else {
+      messageClass = 'alert-danger';
+      message = 'Problem with the server. Please contact us directly by mail or phone.'
+    }
+
+    messageHolder
+      .removeClass('alert-success alert-danger alert-info hidden')
+      .addClass(messageClass)
+      .find('p')
+        .text(message);
+
+    if (data.status === 'OK') {
+      $('#contact-form').trigger("reset");
+    }
+  };
+  
   function ajaxCall(targetUrl, payload, onSuccess, onError) {
     $.ajax({
       url: targetUrl,
@@ -148,14 +189,14 @@ $(document).ready(function () {
       success: function(result) {
         onSuccess(result);
       },
-      error: function(result) {
+      error: function() {
         if (typeof(onError) === 'undefined') {
           console.log('onError');
         } else {
-          onError(result);
+          onError();
         }
       }
     });
-  }
+  };
 
 });

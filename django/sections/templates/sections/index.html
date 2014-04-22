@@ -216,9 +216,13 @@
           Contact info
         </h2>
         <div class="row border-top">
+          <div class="alert alert-danger alert-dismissable hidden" id="info">
+            <button type="button" class="close" aria-hidden="true">&times;</button>
+            <p></p>
+          </div>
           <div class="col-sm-8 col-md-9 contact-form">
             <p>Our staff is available to answer any questions that you might have or to schedule an appointment.</p>
-            <form role="form" class="row" method="post" action="/contact/">{% csrf_token %}
+            <form role="form" class="row" id="contact-form" method="post" action=".">{% csrf_token %}
               <div class="col-md-6 form-group">
                 {{ form.name.label_tag }}
                 {{ form.name }}
@@ -253,7 +257,7 @@
             </address>
             <address>
                 <strong>E-mail</strong><br>
-                <a href="mailto:#">first.last@gmail.com</a>
+                <a href="mailto:#">infogoodcar@gmail.com</a>
             </address>
           </div>
         </div>
