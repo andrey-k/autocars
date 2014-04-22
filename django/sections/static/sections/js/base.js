@@ -96,9 +96,13 @@ $(document).ready(function () {
 
   }
 
-  $('.modal').on('click', '#booking', function() {
-    $('#offer-popup').modal('hide');
+  $('.modal').on('click', '.booking', function() {
+    $('.modal').modal('hide');
     location.href = '#contact';
+  });
+
+  $('.collapse').on('click', 'a', function() {
+    $('.collapse').collapse('hide');
   });
 
   /**
@@ -179,6 +183,10 @@ $(document).ready(function () {
     if (data.status === 'OK') {
       $('#contact-form').trigger("reset");
     }
+
+    $('html, body').animate({
+        scrollTop: messageHolder.offset().top
+    }, 100);
   };
   
   function ajaxCall(targetUrl, payload, onSuccess, onError) {
