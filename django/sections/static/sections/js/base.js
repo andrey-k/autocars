@@ -102,7 +102,9 @@ $(document).ready(function () {
   });
 
   $('.collapse').on('click', 'a', function() {
-    $('.collapse').collapse('hide');
+    if ($('.navbar-toggle').is(":visible")) {
+      $('.navbar-toggle').click();
+    }
   });
 
   /**
