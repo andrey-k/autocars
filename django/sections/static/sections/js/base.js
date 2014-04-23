@@ -171,6 +171,10 @@ $(document).ready(function () {
         messageClass = data.messageClass;
         message = data.message;
       }
+
+      if (data.status === 'OK') {
+        $('#contact-form').trigger("reset");
+      }
     } else {
       messageClass = 'alert-danger';
       message = 'Problem with the server. Please contact us directly by mail or phone.'
@@ -182,12 +186,8 @@ $(document).ready(function () {
       .find('p')
         .text(message);
 
-    if (data.status === 'OK') {
-      $('#contact-form').trigger("reset");
-    }
-
     $('html, body').animate({
-        scrollTop: messageHolder.offset().top
+        scrollTop: messageHolder.offset().top - 60
     }, 100);
   };
   
