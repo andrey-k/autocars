@@ -14,10 +14,10 @@ SUBJECTS = (
 class ContactForm(forms.Form):
     name = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control', 'placeholder': 'Enter name',
-        'required': True}))
+        'required': 'required'}))
     email_address = forms.EmailField(widget=forms.EmailInput(attrs={
         'class': 'form-control', 'placeholder': 'Enter email',
-        'pattern': '[^@]+@[^@]+\.[a-zA-Z]{2,6}', 'required': True}))
+        'pattern': '[^@]+@[^@]+\.[a-zA-Z]{2,6}', 'required': 'required'}))
     subject = forms.ChoiceField(
         widget=forms.Select(attrs={'class': 'form-control'}),
         choices=SUBJECTS)
@@ -27,4 +27,4 @@ class ContactForm(forms.Form):
             'class': 'form-control', 'placeholder': 'Phone number',
             'pattern': '(\+?\d[- .]*){7,13}'}))
     message = forms.CharField(widget=forms.Textarea(
-        attrs={'class': 'form-control', 'rows': '6', 'required': True}))
+        attrs={'class': 'form-control', 'rows': '6', 'required': 'required'}))

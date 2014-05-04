@@ -56,12 +56,12 @@
               {% endautoescape %}
             </a>
           </div>
-          <div class="modal fade" id="week-offer-popup" tabindex="-1" role="dialog" aria-labelledby="offer-popup-label" aria-hidden="true">
+          <div class="modal fade" id="week-offer-popup" tabindex="-1" role="dialog" aria-labelledby="week-offer-popup-label" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <header class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="offer-popup-label">{{ week_offer.title }}</h4>
+                  <h4 class="modal-title" id="week-offer-popup-label">{{ week_offer.title }}</h4>
                 </header>
                 <div class="modal-body">
                   <img class="pop-up" src="{{ week_offer.image.url }}" alt="week offer img">
@@ -95,12 +95,12 @@
               </a>
             </div>
           </div>
-          <div class="modal fade" id="offer-{{ forloop.counter }}-popup" tabindex="-1" role="dialog" aria-labelledby="offer-popup-label" aria-hidden="true">
+          <div class="modal fade" id="offer-{{ forloop.counter }}-popup" tabindex="-1" role="dialog" aria-labelledby="offer-{{ forloop.counter }}-popup-label" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <header class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="offer-popup-label">{{ offer.title }}</h4>
+                  <h4 class="modal-title" id="offer-{{ forloop.counter }}-popup-label">{{ offer.title }}</h4>
                 </header>
                 <div class="modal-body">
                   <img class="pop-up" src="{{ offer.image.url }}" alt="week offer img">
