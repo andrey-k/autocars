@@ -1,0 +1,21 @@
+{
+  "name": "autocars",
+  "version": "1.0.0",
+  "homepage": "goodcar.tk",
+  "authors": [
+    "andrey <andrey.kramarev@gmail.com>"
+  ],
+  "description": "Site for car service.",
+  "main": "django/manage.py",
+  "keywords": [
+    "car",
+    "service",
+    "repair"
+  ],
+  "dependencies": {
+    "jquery": "1.11.1",
+    "lesshat": "latest",
+    "bootstrap": "latest",
+    "respondJS": "latest"
+  }
+}
