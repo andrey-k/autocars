@@ -7,3 +7,4 @@ django/static/
 node_modules/
 django/sections/static/sections/js/*.min.js
 django/sections/static/sections/img/
+django/sections/static/sections/libs/bootstrap.min.css
