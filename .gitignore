@@ -5,3 +5,5 @@ django/sections/static/sections/css/*.css
 django/static/
 .directory
 node_modules/
+django/sections/static/sections/js/*.min.js
+django/sections/static/sections/img/
