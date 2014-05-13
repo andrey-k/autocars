@@ -1,0 +1,27 @@
+{
+  "name": "autocars",
+  "version": "1.0.0",
+  "homepage": "http://goodcar.tk/",
+  "author": {
+    "name": "Andrey Kramarev",
+    "email": "andrey.kramarev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrey-k/autocars"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "gulp-rename": "~1.2.0",
+    "gulp-uncss": "~0.4.3",
+    "gulp-minify-css": "~0.3.4",
+    "gulp-uglify": "~0.3.0",
+    "gulp-imagemin": "~0.5.0",
+    "gulp-less": "~1.2.3",
+    "gulp": "~3.6.2"
+  }
+}
